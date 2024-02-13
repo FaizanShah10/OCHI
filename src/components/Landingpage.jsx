@@ -12,9 +12,11 @@ const Landingpage = () => {
                 {index === 1 && (<motion.div 
                 initial={{width: "0"}} 
                 animate={{width: "8vw"}} 
-                transition={{ease: [0.76, 0, 0.24, 1], duaration: 0.5}}
+                transition={{ease: [0.76, 0, 0.24, 1], duaration: 5}}
                  
-                className='w-[8vw] h-[4.8vw]  ml-2 mr-5 rounded-md relative  bg-red-600'></motion.div>)}
+                >
+                    <img className='w-[8vw] h-[4.8vw] rounded-md relative' src='https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg'></img>
+                </motion.div>)}
                 <h2 className='text-8xl font-semibold text-black  tracking-tighter uppercase leading-[5.5vw] font-["Founders Grotesk"]'>
                     {item}
                 </h2>    

@@ -1,10 +1,19 @@
-import { motion } from 'framer-motion'
+import { motion, useAnimation } from 'framer-motion'
 import { Power4 } from 'gsap'
 import React, { useState } from 'react'
 
 const Projects = () => {
 
-    const [hovering, setHovering] = useState(false)
+    const cards = [useAnimation(), useAnimation()]
+
+    const handleHover = (index) =>{
+        cards[index].start({y: "0"})
+        
+    }
+
+    const handleHoverEnd = (index)=>{
+        cards[index].start({y: "100%"})
+    }
     
   return (
     
@@ -17,30 +26,32 @@ const Projects = () => {
         {/* First row */}
         <div className="flex justify-between w-full mb-6 gap-4">
             {/* card 1 */}
-            <div onMouseEnter={()=> setHovering(true)} onMouseLeave={()=> setHovering(false)} className='cardcontainer relative w-1/2 h-[70vh]'>
+            <motion.div onHoverStart={()=> handleHover(0)} onHoverEnd={()=> handleHoverEnd(0)} className='cardcontainer relative w-1/2 h-[70vh]'>
+                
                 <h1 className='absolute flex overflow-hidden text-8xl font-bold tracking-tighter leading-none 
                 text-[#cdea68] left-full z-[9] -translate-x-1/2 top-1/2 -translate-y-1/2'>
                     {"FYDE".split("").map((item, index)=>(
                         <motion.span
                         initial={{y: "100%"}}
-                        animate={hovering ? ({y: '0'}): ({y: "100%"})}
+                        animate={cards[0]}
                         transition={{ease: [0.16, 1, 0.3, 1], delay: index*.06}}
                         className='inline-block'>{item}
                         </motion.span>
                     ))}
                 </h1>
-                <div className='card w-full h-full rounded-xl overflow-hidden'>
-                    <img src='https://ochi.design/wp-content/uploads/2023/10/Fyde_Illustration_Crypto_2-1326x1101.png' className='w-full h-full'></img>
+                <div  className='card w-full h-full rounded-xl overflow-hidden'>
+                    <motion.img src='https://ochi.design/wp-content/uploads/2023/10/Fyde_Illustration_Crypto_2-1326x1101.png' className='w-full h-full'></motion.img>
                 </div>
-            </div>
+
+            </motion.div>
 
             {/* card 2 */}
-            <div onMouseEnter={()=> setHovering(true)} onMouseLeave={()=> setHovering(false)}  className='cardcontainer relative w-1/2 h-[70vh]'>
+            <motion.div onHoverStart={()=> handleHover(1)} onHoverEnd={()=> handleHoverEnd(1)} className='cardcontainer relative w-1/2 h-[70vh]'>
                 <h1 className='absolute flex overflow-hidden text-8xl font-bold tracking-tighter leading-none text-[#cdea68] right-full z-[9] translate-x-1/2 top-1/2 -translate-y-1/2'>
                 {"VISE".split("").map((item, index)=>(
                         <motion.span
                         initial={{y: "100%"}}
-                        animate={hovering ? ({y: '0'}): ({y: "100%"})}
+                        animate={cards[1]}
                         transition={{ease: [0.16, 1, 0.3, 1], delay: index*.06}}
                         className='inline-block'>{item}
                         </motion.span>
@@ -49,34 +60,45 @@ const Projects = () => {
                 <div className='card w-full h-full rounded-xl overflow-hidden'>
                     <img src='https://ochi.design/wp-content/uploads/2022/09/Vise_front2-1326x1101.jpg' className='w-full h-full'></img>
                 </div>
-            </div>
+            </motion.div>
         </div>
 
         {/* Second row */}
         <div className="flex justify-between w-full gap-4">
             {/* card 3 */}
-            <div className='cardcontainer relative w-1/2 h-[70vh]'>
-                <h1 className='absolute text-8xl font-bold tracking-tighter leading-none text-[#cdea68] left-full z-[9] -translate-x-1/2 top-1/2 -translate-y-1/2'>
+            <motion.div onHoverStart={()=> handleHover(2)} onHoverEnd={()=> handleHoverEnd(2)} className='cardcontainer relative w-1/2 h-[70vh]'>
+                <h1 className='absolute flex overflow-hidden text-8xl font-bold tracking-tighter leading-none 
+                text-[#cdea68] left-full z-[9] -translate-x-1/2 top-1/2 -translate-y-1/2'>
                     {"TRAWA".split("").map((item, index)=>(
-                        <span key={index}>{item}</span>
+                        <motion.span
+                        initial={{y: "100%"}}
+                        animate={cards[2]}
+                        transition={{ease: [0.16, 1, 0.3, 1], delay: index*.06}}
+                        className='inline-block'>{item}
+                        </motion.span>
                     ))}
                 </h1>
                 <div className='card w-full h-full rounded-xl overflow-hidden'>
                     <img src='https://ochi.design/wp-content/uploads/2023/08/Frame-3875-1326x1101.jpg' className='w-full h-full'></img>
                 </div>
-            </div>
+            </motion.div>
 
             {/* card 4 */}
-            <div className='cardcontainer relative w-1/2 h-[70vh]'>
-                <h1 className='absolute text-8xl font-bold tracking-tighter leading-none text-[#cdea68] right-full z-[9] translate-x-1/2 top-1/2 -translate-y-1/2'>
+            <motion.div onHoverStart={()=> handleHover(3)} onHoverEnd={()=> handleHover(3)} className='cardcontainer relative w-1/2 h-[70vh]'>
+                <h1 className='absolute flex overflow-hidden text-8xl font-bold tracking-tighter leading-none text-[#cdea68] right-full z-[9] translate-x-1/2 top-1/2 -translate-y-1/2'>
                     {"PREMIUM".split("").map((item, index)=>(
-                        <span key={index}>{item}</span>
+                        <motion.span
+                        initial={{y: "100%"}}
+                        animate={cards[3]}
+                        transition={{ease: [0.16, 1, 0.3, 1], delay: index*.06}}
+                        className='inline-block'>{item}
+                        </motion.span>
                     ))}
                 </h1>
                 <div className='card w-full h-full rounded-xl overflow-hidden'>
                     <img src='https://ochi.design/wp-content/uploads/2022/12/PB-Front-4-1326x1101.png' className='w-full h-full'></img>
                 </div>
-            </div>
+            </motion.div>
         </div>
     </div>
 
