@@ -26,22 +26,26 @@ const Projects = () => {
         {/* First row */}
         <div className="flex justify-between w-full mb-6 gap-4">
             {/* card 1 */}
-            <motion.div onHoverStart={()=> handleHover(0)} onHoverEnd={()=> handleHoverEnd(0)} className='cardcontainer relative w-1/2 h-[70vh]'>
-                
-                <h1 className='absolute flex overflow-hidden text-8xl font-bold tracking-tighter leading-none 
-                text-[#cdea68] left-full z-[9] -translate-x-1/2 top-1/2 -translate-y-1/2'>
-                    {"FYDE".split("").map((item, index)=>(
-                        <motion.span
-                        initial={{y: "100%"}}
-                        animate={cards[0]}
-                        transition={{ease: [0.16, 1, 0.3, 1], delay: index*.06}}
-                        className='inline-block'>{item}
-                        </motion.span>
-                    ))}
-                </h1>
-                <div  className='card w-full h-full rounded-xl overflow-hidden'>
-                    <motion.img src='https://ochi.design/wp-content/uploads/2023/10/Fyde_Illustration_Crypto_2-1326x1101.png' className='w-full h-full'></motion.img>
-                </div>
+            <motion.div 
+                onHoverStart={()=> handleHover(0)} 
+                onHoverEnd={()=> handleHoverEnd(0)} 
+                className='cardcontainer relative w-1/2 h-[70vh]'>
+                    
+                    <h1 className='absolute flex overflow-hidden text-8xl font-bold tracking-tighter leading-none 
+                    text-[#cdea68] left-full z-[9] -translate-x-1/2 top-1/2 -translate-y-1/2'>
+                        {"FYDE".split("").map((item, index)=>(
+                            <motion.span
+                            key={index}
+                            initial={{y: "100%"}}
+                            animate={cards[0]}
+                            transition={{ease: [0.16, 1, 0.3, 1], delay: index*.06}}
+                            className='inline-block'>{item}
+                            </motion.span>
+                        ))}
+                    </h1>
+                    <div  className='card w-full h-full rounded-xl overflow-hidden'>
+                        <img src='https://ochi.design/wp-content/uploads/2023/10/Fyde_Illustration_Crypto_2-1326x1101.png' className='w-full h-full'></img>
+                    </div>
 
             </motion.div>
 
@@ -66,11 +70,16 @@ const Projects = () => {
         {/* Second row */}
         <div className="flex justify-between w-full gap-4">
             {/* card 3 */}
-            <motion.div onHoverStart={()=> handleHover(2)} onHoverEnd={()=> handleHoverEnd(2)} className='cardcontainer relative w-1/2 h-[70vh]'>
+            <motion.div 
+            onHoverStart={()=> handleHover(2)} 
+            onHoverEnd={()=> handleHoverEnd(2)} 
+            className='cardcontainer relative w-1/2 h-[70vh]'>
+
                 <h1 className='absolute flex overflow-hidden text-8xl font-bold tracking-tighter leading-none 
                 text-[#cdea68] left-full z-[9] -translate-x-1/2 top-1/2 -translate-y-1/2'>
                     {"TRAWA".split("").map((item, index)=>(
                         <motion.span
+                        key={index}
                         initial={{y: "100%"}}
                         animate={cards[2]}
                         transition={{ease: [0.16, 1, 0.3, 1], delay: index*.06}}
@@ -85,9 +94,11 @@ const Projects = () => {
 
             {/* card 4 */}
             <motion.div onHoverStart={()=> handleHover(3)} onHoverEnd={()=> handleHover(3)} className='cardcontainer relative w-1/2 h-[70vh]'>
-                <h1 className='absolute flex overflow-hidden text-8xl font-bold tracking-tighter leading-none text-[#cdea68] right-full z-[9] translate-x-1/2 top-1/2 -translate-y-1/2'>
+                <h1 className='absolute flex overflow-hidden text-8xl font-bold tracking-tighter leading-none 
+                text-[#cdea68] right-full z-[9] translate-x-1/2 top-1/2 -translate-y-1/2'>
                     {"PREMIUM".split("").map((item, index)=>(
                         <motion.span
+                        key={index}
                         initial={{y: "100%"}}
                         animate={cards[3]}
                         transition={{ease: [0.16, 1, 0.3, 1], delay: index*.06}}

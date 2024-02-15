@@ -1,13 +1,14 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Landingpage from './components/Landingpage'
-import Marqee from './components/Marqee'
-import Approach from './components/Approach'
-import Playscreen from './components/Playscreen'
-import Projects from './components/Projects'
-import Cards from './components/Cards'
-import Footer from './components/Footer'
 import LocomotiveScroll from 'locomotive-scroll';
+import {
+  Route,
+  BrowserRouter,
+  Routes
+  
+} from "react-router-dom"; 
+import Home from './pages/Home';
+import About from './pages/About'
+import Services from './pages/Services'
+import Contact from './pages/Contact'
 
 const App = () => {
 
@@ -15,14 +16,18 @@ const App = () => {
   
   return (
     <div>
-      <Navbar/>
-      <Landingpage/>
-      <Marqee/>
-      <Approach/>
-      <Playscreen/>
-      <Projects/>
-      <Cards/>
-      <Footer/>
+
+
+      <Routes>
+      <Route path="/">
+          <Route index  element={<Home />}/>
+          <Route path="/services" element={<Services />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    
+   
     </div>
   )
 }

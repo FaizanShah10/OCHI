@@ -2,7 +2,7 @@ import React from 'react'
 
 const Cards = () => {
   return (
-    <div data-scroll data-scroll-section data-scroll-speed="-.2" className='px-20 flex gap-6 mt-20 mb-80'>
+    <div data-scroll data-scroll-section data-scroll-speed="-.2" className='px-20 flex gap-6 pt-32 pb-40'>
         <div className='card-1 relative w-1/2 h-[45vh] bg-[#004D43] rounded-xl flex justify-center items-center'>
         <picture>
 						<img className="entered loaded" data-component="lazyload" data-animate="data-animate" src="https://ochi.design/wp-content/uploads/2022/04/logo001.svg" height="150" width="150" data-src="https://ochi.design/wp-content/uploads/2022/04/logo001.svg" alt="https://ochi.design/wp-content/uploads/2022/04/logo001.svg" data-ll-status="loaded" />

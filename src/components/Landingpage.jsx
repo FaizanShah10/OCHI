@@ -34,8 +34,8 @@ const Landingpage = () => {
                     ))}
 
                     <div className='start flex items-center gap-2'>
-                    <button className='py-2 px-4 border-[1px] border-black rounded-full hover:bg-black hover:text-black'>START THE PROJECT</button> 
-                    <div className='py-[6px] px-[6px] border-[1px] border-black rounded-full hover:bg-black hover:text-black'><ArrowUpRight/></div> 
+                    <button className='py-2 px-4 border-[1px] border-black rounded-full hover:bg-black hover:text-white'>START THE PROJECT</button> 
+                    <div className='py-[6px] px-[6px] border-[1px] border-black rounded-full hover:bg-black hover:text-white'><ArrowUpRight/></div> 
                     </div>
                     
                 </div>

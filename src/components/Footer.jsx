@@ -47,12 +47,7 @@ function Footer() {
                 </div>
 
                 <h2 className='text-gray-400 mt-10'>© ochi design 2024. <button className='underline'>Legal Terms</button> </h2>
-                <p>L:</p>
-                    <span className='links flex flex-col underline cursor-pointer mt-4 mb-12 mr-[10vw]'>
-                    {["202-1965 W 4th Ave", "Vancouver, Canada", "", ""].map((item, index)=>(
-                    <a key={index} className=''>{item}</a>
-                    ))}
-                    </span>
+                
             
             </div>
         </div>
