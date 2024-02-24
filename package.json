@@ -1,23 +1,26 @@
 {
   "name": "ochi",
+  "homepage": "https://FaizanShah10.github.io/OCHI",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
-    "framer-motion": "^11.0.3",
+    "cors": "^2.8.5",
+    "framer-motion": "^11.0.5",
     "gsap": "^3.12.5",
-    "locomotive-scroll": "^5.0.0-beta.11",
+    "locomotive-scroll": "^4.1.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.10",
-    "react-router": "^6.22.0",
-    "react-router-dom": "^6.22.0"
+    "react-router-dom": "^6.22.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.55",

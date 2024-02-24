@@ -16,8 +16,7 @@ const App = () => {
   
   return (
     <div>
-
-
+      <BrowserRouter>
       <Routes>
       <Route path="/">
           <Route index  element={<Home />}/>
@@ -26,6 +25,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
+      </BrowserRouter>
     
    
     </div>
